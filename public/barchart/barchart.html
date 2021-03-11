@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="js/d3.v4.min.js"></script>
+    <script type="text/javascript" src="js/d3-queue.min.js"></script>
+
+    <script type="text/javascript" src="js/d3.tip.v0.6.3.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/bar1.css">
+</head>
+<body>
+<form>
+    <label for="year">请选择时间段(每10年): </label>
+    <input type="range" min=1926 max=2016 step=10 id="year" value=2016
+           oninput="selected_year.value = year.value-9 +'-'+ year.value">
+    <output name="selected_year" id="selected_year">2007-2016</output>
+
+</form>
+<div id="vis">
+</div>
+<script type="text/javascript" src="js/scriptbar1.js"></script>
+</body>
+</html>

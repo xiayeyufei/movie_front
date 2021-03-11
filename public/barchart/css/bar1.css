@@ -1,0 +1,28 @@
+ html, body, #vis {
+        height: 95%;
+		width: 700px;
+        margin: 0;
+ }
+
+ label, output{
+	font-size:17px;
+ }
+
+ .x.axis text {
+	text-anchor: end !important;
+	transform: rotate(-45deg);
+ }
+
+
+.tooltip {
+  position: absolute;
+  text-align: center;
+  width: 60px;
+  height: 12px;
+  padding: 8px;
+  margin-top: -20px;
+  font-size: 10px ;
+  background: #ddd;
+  pointer-events: none;
+}
+

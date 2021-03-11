@@ -1,0 +1,58 @@
+{
+  "id": "1724768",
+  "name": "1",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1233444",
+      "name": "豆瓣",
+      "font_class": "douban",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "9186712",
+      "name": "微博",
+      "font_class": "weibo",
+      "unicode": "e666",
+      "unicode_decimal": 58982
+    },
+    {
+      "icon_id": "13469481",
+      "name": "imdb",
+      "font_class": "imdb",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "5664303",
+      "name": "fsux_图表_柱状图",
+      "font_class": "fsux_tubiao_zhuzhuangtu",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "5664304",
+      "name": "fsux_图表_折线图",
+      "font_class": "fsux_zhexiantu",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "5664455",
+      "name": "fsux_图表_散点图",
+      "font_class": "fsux_tubiao_sandiantu",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "5667281",
+      "name": "fsux_图表_关系图",
+      "font_class": "fsux_tubiao_guanxitu",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    }
+  ]
+}
