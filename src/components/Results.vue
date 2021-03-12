@@ -1,16 +1,17 @@
 <template>
     <div>
-        <el-row>
-            <el-card body-style="padding: 0" style="height: 220px">
+      <div >
+        <el-row style="margin-bottom: 20px" v-for="movieitem in moviegroup" :key="movieitem.id">
+            <el-card body-style="padding: 0" style="height: 220px" >
                 <el-row>
                     <el-col span="4">
-                        <img src="https://p1.meituan.net/movie/6bea9af4524dfbd0b668eaa7e187c3df767253.jpg@464w_644h_1e_1c"
-                             alt="这个杀手不太冷 - Léon"
+                        <img :src=movieitem.image
+                             :alt=movieitem.title
                              style="background-size: cover;height: 220px">
                     </el-col>
                     <el-col span="15" offset="1">
                         <el-row style="margin-top: 15px">
-                            <h2 style="margin: 0 0">这个杀手不太冷 - Léon</h2>
+                            <h2 style="margin: 0 0">{{ movieitem.title }}</h2>
                         </el-row>
                         <el-row style="margin-top: 10px">
                             <el-button type="danger" round size="mini">剧情</el-button>
@@ -18,27 +19,25 @@
                             <el-button type="danger" round size="mini">犯罪</el-button>
                         </el-row>
                         <el-row style="margin-top: 10px">
-                            <el-tag size="small">吕克·贝松</el-tag>
+                            <el-tag size="small">{{ movieitem.director }}</el-tag>
                         </el-row>
                         <el-row style="margin-top: 10px">
-                            <el-tag size="small">让·雷诺</el-tag>
-                            <el-tag size="small" style="margin-left: 15px">娜塔丽·波特曼</el-tag>
-                            <el-tag size="small" style="margin-left: 15px">加里·奥德曼</el-tag>
+                              <el-tag size="small" style="margin-right: 12px" v-for="actoritem in movieitem.actor" :key="actoritem">{{actoritem}}</el-tag>
                         </el-row>
                         <el-row style="margin-top: 10px">
-                            <span style="font-size: 13px">法国 / 110 分钟</span>
+                            <span style="font-size: 13px">{{ movieitem.country_time }}</span>
                         </el-row>
                         <el-row style="margin-top: 6px">
-                            <span style="font-size: 13px">1994-09-14</span>
+                            <span style="font-size: 13px">{{ movieitem.date }}</span>
                         </el-row>
                     </el-col>
                     <el-col span="4" pull="1">
                         <el-row>
-                            <span style="color: #ffb400;font-size: 40px;font-weight: 700;">{{value1}}</span>
+                            <span style="color: #ffb400;font-size: 40px;font-weight: 700;">{{movieitem.score}}</span>
                         </el-row>
                         <el-row>
                             <el-rate
-                                    v-model="value1"
+                                    v-model="movieitem.score"
                                     disabled
                                     show-score
                                     text-color="#ff9900"
@@ -46,13 +45,13 @@
                             </el-rate>
                         </el-row>
                         <el-row style="margin-top: 10px">
-                            <span style="color: #475669;font-style: italic;font-size: small">"里昂（让·雷诺 饰）是名孤独的职业杀手，受人雇佣。一天，邻居家小姑娘马蒂尔德（纳塔丽·波特曼 饰）敲开他的房门……"</span>
+                            <span style="color: #475669;font-style: italic;font-size: small">{{movieitem.introduction}}</span>
                         </el-row>
                     </el-col>
                 </el-row>
             </el-card>
         </el-row>
-
+      </div>
         <el-row style="margin-top: 20px">
             <el-card body-style="padding: 0" style="height: 220px">
                 <el-row>
@@ -165,6 +164,45 @@
         name: "Results",
         data() {
             return {
+              moviegroup:[
+                {
+                  id:1,
+                  title:'这个杀手不太冷 - Léon',
+                  image:'https://p1.meituan.net/movie/6bea9af4524dfbd0b668eaa7e187c3df767253.jpg@464w_644h_1e_1c',
+                  director:'吕克·贝松',
+                  tag:['剧情','动作','犯罪'],
+                  actor:['让·雷诺','娜塔丽·波特曼','加里·奥德曼'],
+                  score:'4.5',
+                  introduction:'里昂（让·雷诺 饰）是名孤独的职业杀手，受人雇佣。一天，邻居家小姑娘马蒂尔德（纳塔丽·波特曼 饰）敲开他的房门……',
+                  country_time:'法国 / 110 分钟',
+                  date:'1994-09-14'
+                },
+                {
+                  id:2,
+                  title:'这个杀手不太冷 - Léon',
+                  image:'https://p1.meituan.net/movie/6bea9af4524dfbd0b668eaa7e187c3df767253.jpg@464w_644h_1e_1c',
+                  director:'吕克·贝松',
+                  tag:['剧情','动作','犯罪'],
+                  actor:['让·雷诺','娜塔丽·波特曼','加里·奥德曼'],
+                  score:'4.5',
+                  introduction:'里昂（让·雷诺 饰）是名孤独的职业杀手，受人雇佣。一天，邻居家小姑娘马蒂尔德（纳塔丽·波特曼 饰）敲开他的房门……',
+                  country_time:'法国 / 110 分钟',
+                  date:'1994-09-14'
+                },
+                {
+                  id:3,
+                  title:'这个杀手不太冷 - Léon',
+                  image:'https://p1.meituan.net/movie/6bea9af4524dfbd0b668eaa7e187c3df767253.jpg@464w_644h_1e_1c',
+                  director:'吕克·贝松',
+                  tag:['剧情','动作','犯罪'],
+                  actor:['让·雷诺','娜塔丽·波特曼','加里·奥德曼'],
+                  score:'4.5',
+                  introduction:'里昂（让·雷诺 饰）是名孤独的职业杀手，受人雇佣。一天，邻居家小姑娘马蒂尔德（纳塔丽·波特曼 饰）敲开他的房门……',
+                  country_time:'法国 / 110 分钟',
+                  date:'1994-09-14'
+                },
+              ],
+
                 value1: 4.5,
                 value2: 4.2,
                 value3: 4.5

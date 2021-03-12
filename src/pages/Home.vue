@@ -17,8 +17,8 @@
                     <el-row>
                         <el-col span="8">
                             <a href="#/details?id=6534248">
-                                <img src="http://image14.m1905.cn/uploadfile/2019/0228/thumb_1_320_174_20190228030737874062.jpg"
-                                     alt="《无敌破坏王2：大闹互联网》：最具互联网精神的动画佳作">
+                                <img :src="avatar"
+                                     alt="《无敌破坏王2：大闹互联网》：最具互联网精神的动画佳作" style="width: auto;height: auto">
                             </a>
                         </el-col>
                         <el-col span="15" offset="1">
@@ -94,12 +94,12 @@
 
 <script>
     import NavBar from '@/components/NavBar'
-
     export default {
         name: "Home",
         components: {NavBar},
         data() {
             return {
+              avatar: "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2527427661.jpg",
                 carousels: [
                     {
                         img: 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=257249189,2109112446&fm=26&gp=0.jpg',
