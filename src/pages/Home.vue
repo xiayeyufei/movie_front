@@ -19,8 +19,8 @@
               <el-row>
                 <el-col span="8">
                   <a href="#/details?id=6534248">
-                    <img :src="avatar"
-                         alt="《无敌破坏王2：大闹互联网》：最具互联网精神的动画佳作" style="width: 460px">
+                    <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3654606833,2475380010&fm=26&gp=0.jpg"
+                         alt="《无敌破坏王2：大闹互联网》：最具互联网精神的动画佳作">
                   </a>
                 </el-col>
                 <el-col span="15" offset="1">
@@ -103,7 +103,7 @@
         components: {NavBar},
         data() {
             return {
-              avatar: "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3654606833,2475380010&fm=26&gp=0.jpg",
+
                 carousels: [
                     {
                         img: 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=257249189,2109112446&fm=26&gp=0.jpg',

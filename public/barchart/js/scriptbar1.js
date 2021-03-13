@@ -32,7 +32,7 @@ var y_scale = d3.scaleLinear()
     .range([height, 0]);
 
 var colour_scale = d3.scaleQuantile()
-    .range(["#fec44f", "#fe9929", "#ec7014", "#cc4c02", "#993404", "#662506"]);
+    .range(["#82B1FF", "#03A9F4", "#00BCD4", "#009688", "#01579B", "#006064"]);
 
 var y_axis = d3.axisLeft(y_scale);
 var x_axis = d3.axisBottom(x_scale);

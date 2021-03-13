@@ -1,6 +1,9 @@
 <template>
     <div>
       <div >
+        <el-row type="flex" justify="end" style="margin-bottom: 20px">
+          <el-button plain type="primary" icon="el-icon-refresh">再来一批</el-button>
+        </el-row>
         <el-row style="margin-bottom: 20px" v-for="movieitem in moviegroup" :key="movieitem.id">
             <el-card body-style="padding: 0" style="height: auto" >
                 <el-row >
@@ -13,22 +16,32 @@
                         <el-row style="margin-top: 15px">
                             <h2 style="margin: 0 0">{{ movieitem.title }}</h2>
                         </el-row>
-                        <el-row style="margin-top: 10px">
-                            <el-button type="danger" round size="mini">剧情</el-button>
-                            <el-button type="danger" round size="mini">动作</el-button>
-                            <el-button type="danger" round size="mini">犯罪</el-button>
+                        <el-row >
+                          <v-chip  class="ma-2"
+                                   color="pink"
+                                   label
+                                   text-color="white" v-for="tags in movieitem.tag" :key="tags" type="danger" round size="mini">{{ tags }}</v-chip>
                         </el-row>
-                        <el-row style="margin-top: 10px">
-                            <el-tag size="small">{{ movieitem.director }}</el-tag>
+                        <el-row >
+                            <v-chip class="ma-2"
+                                    color="primary"
+                                    label
+                            >
+                              <v-icon left>
+                                mdi-account-circle-outline
+                              </v-icon>{{ movieitem.director }}</v-chip>
                         </el-row>
-                        <el-row style="margin-top: 10px">
-                              <el-tag size="small" style="margin-right: 12px" v-for="actoritem in movieitem.actor" :key="actoritem">{{actoritem}}</el-tag>
+                        <el-row >
+                              <v-chip  class="ma-2"
+                                       color="primary"
+                                       outlined
+                                       pill size="small" style="margin-right: 5px" v-for="actoritem in movieitem.actor" :key="actoritem">{{actoritem}}</v-chip>
                         </el-row>
-                        <el-row style="margin-top: 10px">
-                            <span style="font-size: 13px">{{ movieitem.country_time }}</span>
+                        <el-row>
+                            <p style="font-size: 16px;margin-bottom: 0px">{{ movieitem.country_time }}</p>
                         </el-row>
-                        <el-row style="margin-top: 6px">
-                            <span style="font-size: 13px">{{ movieitem.date }}</span>
+                        <el-row>
+                            <p style="font-size: 16px;margin-bottom: 0px">{{ movieitem.date }}</p>
                         </el-row>
                     </el-col>
                     <el-col span="4" pull="1">
