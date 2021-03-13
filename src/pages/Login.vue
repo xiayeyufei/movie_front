@@ -6,7 +6,11 @@
                  ref="ruleForm"
                  class="login-container"
                  label-width="0px">
-            <h3 class="login_title">豆瓣瓣登录</h3>
+            <h2 style="text-align: center ;color: #4ea4dc;border-bottom: #4ea4dc ;border-bottom-style:solid;border-bottom-width: 0.25rem;font-size: 1.6rem;
+line-height: 3rem;">豆瓣瓣登录</h2>
+          <p>
+            <br>
+          </p>
             <el-form-item prop="username">
                 <el-input type="text" v-model="ruleForm.username"
                           auto-complete="off" placeholder="账号"></el-input>
@@ -16,9 +20,9 @@
                           auto-complete="off" placeholder="密码"></el-input>
             </el-form-item>
             <el-form-item style="width: 100%">
-                <el-button type="primary" style="width: 100%;background: #505458;border: none" v-on:click="handleSubmit"
+                <v-btn color="light-blue lighten-3" style="color:white;width: 100%;background: #505458;border: none" v-on:click="handleSubmit"
                            :loading="login">登录
-                </el-button>
+                </v-btn>
             </el-form-item>
         </el-form>
     </div>
@@ -63,7 +67,7 @@
 
 <style scoped>
     #poster {
-        background: url("../assets/loginPic.jpg") no-repeat center;
+        background: url("../assets/59190594_p0.jpg") no-repeat center;
         height: 100%;
         width: 100%;
         background-size: cover;
@@ -81,10 +85,6 @@
         box-shadow: 0 0 25px #cac6c6;
     }
 
-    .login_title {
-        margin: 0 auto 40px auto;
-        text-align: center;
-        color: #505458;
-    }
+
 
 </style>

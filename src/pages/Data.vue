@@ -2,6 +2,41 @@
     <div>
         <NavBar></NavBar>
         <div style="width: 1000px;margin: 20px auto auto auto">
+          <v-card color="basil">
+            <v-card-title class="text-center justify-center py-6">
+              <h1 class="font-weight-bold display-3 basil--text">
+                BASiL
+              </h1>
+            </v-card-title>
+
+            <v-tabs
+                v-model="tab"
+                background-color="transparent"
+                color="basil"
+                grow
+            >
+              <v-tab
+                  v-for="item in items"
+                  :key="item"
+              >
+                {{ item }}
+              </v-tab>
+            </v-tabs>
+
+            <v-tabs-items v-model="tab">
+              <v-tab-item
+                  v-for="item in items"
+                  :key="item"
+              >
+                <v-card
+                    color="basil"
+                    flat
+                >
+                  <v-card-text>{{ text }}</v-card-text>
+                </v-card>
+              </v-tab-item>
+            </v-tabs-items>
+          </v-card>
             <el-tabs type="border-card" stretch="true">
                 <el-tab-pane label="柱状图">
                     <el-row>
@@ -112,7 +147,12 @@
         name: "BigData",
         components: {NavBar},
         data() {
-            return {}
+            return {
+              tab: null,
+              items: [
+                '柱状图', '折线图', '网络拓扑图', '散点图',
+              ],
+            }
         },
         mounted() {
             document.querySelector('body').setAttribute('style', 'background-color:#f5f5f5')

@@ -2,8 +2,8 @@
     <div>
       <div >
         <el-row style="margin-bottom: 20px" v-for="movieitem in moviegroup" :key="movieitem.id">
-            <el-card body-style="padding: 0" style="height: 220px" >
-                <el-row>
+            <el-card body-style="padding: 0" style="height: auto" >
+                <el-row >
                     <el-col span="4">
                         <img :src=movieitem.image
                              :alt=movieitem.title
@@ -33,16 +33,16 @@
                     </el-col>
                     <el-col span="4" pull="1">
                         <el-row>
-                            <span style="color: #ffb400;font-size: 40px;font-weight: 700;">{{movieitem.score}}</span>
+                            <span style="color: #ffb400;font-size: 40px;font-weight: 700;padding-left: 5px">{{movieitem.score}}</span>
                         </el-row>
                         <el-row>
-                            <el-rate
+                            <v-rating
                                     v-model="movieitem.score"
                                     disabled
-                                    show-score
-                                    text-color="#ff9900"
-                                    score-template="">
-                            </el-rate>
+                                    medium
+                                    background-color="orange lighten-3"
+                                    color="orange">
+                            </v-rating>
                         </el-row>
                         <el-row style="margin-top: 10px">
                             <span style="color: #475669;font-style: italic;font-size: small">{{movieitem.introduction}}</span>
@@ -172,7 +172,7 @@
                   director:'吕克·贝松',
                   tag:['剧情','动作','犯罪'],
                   actor:['让·雷诺','娜塔丽·波特曼','加里·奥德曼'],
-                  score:'4.5',
+                  score:'3.5',
                   introduction:'里昂（让·雷诺 饰）是名孤独的职业杀手，受人雇佣。一天，邻居家小姑娘马蒂尔德（纳塔丽·波特曼 饰）敲开他的房门……',
                   country_time:'法国 / 110 分钟',
                   date:'1994-09-14'

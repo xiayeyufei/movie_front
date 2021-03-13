@@ -1,19 +1,14 @@
 <template>
-  <div id="app">
-    <router-link to="/login"></router-link>
-    <router-view/>
-  </div>
+  <v-app>
+    <v-main>
+      <router-view/>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
 
 export default {
-  name: 'App'
-}
+  name: 'App',
+};
 </script>
-
-<style>
-  body {
-    margin: 0;
-  }
-</style>

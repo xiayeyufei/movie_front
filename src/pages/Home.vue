@@ -2,91 +2,95 @@
     <div>
         <NavBar></NavBar>
         <router-view/>
+      <v-container>
         <el-row>
-            <el-col span="20" offset="2">
-                <el-carousel :interval="4000" type="card">
-                    <el-carousel-item v-for="item in carousels" :key="item.img">
-                        <img class="carousel-img" :src="item.img" @click="goDetail(item.id)" alt="No Network.">
-                    </el-carousel-item>
-                </el-carousel>
-            </el-col>
+          <el-col span="18" offset="3">
+            <v-carousel :interval="4000" height="400px">
+              <v-carousel-item v-for="item in carousels" :key="item.img">
+                <img class="carousel-img" :src="item.img" @click="goDetail(item.id)" alt="No Network.">
+              </v-carousel-item>
+            </v-carousel>
+          </el-col>
         </el-row>
-        <el-row>
-            <el-col span="18" offset="3">
-                <el-card>
-                    <el-row>
-                        <el-col span="8">
-                            <a href="#/details?id=6534248">
-                                <img :src="avatar"
-                                     alt="《无敌破坏王2：大闹互联网》：最具互联网精神的动画佳作" style="width: auto;height: auto">
-                            </a>
-                        </el-col>
-                        <el-col span="15" offset="1">
-                            <!--                            <h4 style="text-align: center">s</h4>-->
-                            <el-link href="#/details?id=6534248"
-                                     style="text-align: center;font-weight: bold;font-size: large">
-                                《无敌破坏王2：大闹互联网》：最具互联网精神的动画佳作
-                            </el-link>
-                            <p class="txt-abstract">
-                                去年11月，由迪士尼打造的动画电影《无敌破坏王2：大闹互联网》在国内上映。影片继续围绕生活在电玩游戏厅的破坏王拉尔夫和赛车女孩云妮洛普展开。因为一次意外，云妮洛普所在的游戏装备损坏，他们决定前往互联网寻...</p>
-                            <div class="txt-date">2019-03-01</div>
-                        </el-col>
-                    </el-row>
-                </el-card>
-            </el-col>
+
+        <el-row style="padding-top: 50px">
+          <el-col span="18" offset="3">
+            <el-card>
+              <el-row>
+                <el-col span="8">
+                  <a href="#/details?id=6534248">
+                    <img :src="avatar"
+                         alt="《无敌破坏王2：大闹互联网》：最具互联网精神的动画佳作" style="width: 460px">
+                  </a>
+                </el-col>
+                <el-col span="15" offset="1">
+                  <!--                            <h4 style="text-align: center">s</h4>-->
+                  <el-link href="#/details?id=6534248"
+                           style="text-align: center;font-weight: bold;font-size: large">
+                    《无敌破坏王2：大闹互联网》：最具互联网精神的动画佳作
+                  </el-link>
+                  <p class="txt-abstract">
+                    去年11月，由迪士尼打造的动画电影《无敌破坏王2：大闹互联网》在国内上映。影片继续围绕生活在电玩游戏厅的破坏王拉尔夫和赛车女孩云妮洛普展开。因为一次意外，云妮洛普所在的游戏装备损坏，他们决定前往互联网寻...</p>
+                  <div class="txt-date">2019-03-01</div>
+                </el-col>
+              </el-row>
+            </el-card>
+          </el-col>
         </el-row>
 
 
         <el-row style="margin-top: 20px">
-            <el-col span="18" offset="3">
-                <el-card>
-                    <el-row>
-                        <el-col span="8">
-                            <a href="#/details?id=26266893">
-                                <img src="http://image11.m1905.cn/uploadfile/2019/0208/thumb_1_320_174_20190208021755258444.jpg"
-                                     alt="独家解析《流浪地球》中国表达带给科幻的独特情怀">
-                            </a>
-                        </el-col>
-                        <el-col span="15" offset="1">
-                            <!--                            <h4 style="text-align: center">s</h4>-->
-                            <el-link href="#/details?id=26266893"
-                                     style="text-align: center;font-weight: bold;font-size: large">
-                                独家解析《流浪地球》中国表达带给科幻的独特情怀
-                            </el-link>
-                            <p class="txt-abstract">
-                                本期《今日影评》特邀导演郭帆，送出新年“振兴福”。为您解析《流浪地球》：中国表达带给科幻的独特情怀。</p>
-                            <div class="txt-date">2019-02-08</div>
-                        </el-col>
-                    </el-row>
-                </el-card>
-            </el-col>
+          <el-col span="18" offset="3">
+            <el-card>
+              <el-row>
+                <el-col span="8">
+                  <a href="#/details?id=26266893">
+                    <img src="http://image11.m1905.cn/uploadfile/2019/0208/thumb_1_320_174_20190208021755258444.jpg"
+                         alt="独家解析《流浪地球》中国表达带给科幻的独特情怀">
+                  </a>
+                </el-col>
+                <el-col span="15" offset="1">
+                  <!--                            <h4 style="text-align: center">s</h4>-->
+                  <el-link href="#/details?id=26266893"
+                           style="text-align: center;font-weight: bold;font-size: large">
+                    独家解析《流浪地球》中国表达带给科幻的独特情怀
+                  </el-link>
+                  <p class="txt-abstract">
+                    本期《今日影评》特邀导演郭帆，送出新年“振兴福”。为您解析《流浪地球》：中国表达带给科幻的独特情怀。</p>
+                  <div class="txt-date">2019-02-08</div>
+                </el-col>
+              </el-row>
+            </el-card>
+          </el-col>
         </el-row>
 
 
         <el-row style="margin-top: 20px">
-            <el-col span="18" offset="3">
-                <el-card>
-                    <el-row>
-                        <el-col span="8">
-                            <a href="#/details?id=26374197">
-                                <img src="http://image13.m1905.cn/uploadfile/2018/1225/thumb_1_320_174_20181225093645278589.jpg"
-                                     alt="《蜘蛛侠：平行宇宙》跳出舒适圈 开启多远宇宙空间">
-                            </a>
-                        </el-col>
-                        <el-col span="15" offset="1">
-                            <!--                            <h4 style="text-align: center">s</h4>-->
-                            <el-link href="#/details?id=26374197"
-                                     style="text-align: center;font-weight: bold;font-size: large">
-                                《蜘蛛侠：平行宇宙》跳出舒适圈 开启多远宇宙空间
-                            </el-link>
-                            <p class="txt-abstract">
-                                本期《今日影评》特邀中国电影艺术研究中心副研究员左衡，为您解析《蜘蛛侠：平行宇宙》：六个蜘蛛侠会发生怎样的故事？</p>
-                            <div class="txt-date">2018-12-24</div>
-                        </el-col>
-                    </el-row>
-                </el-card>
-            </el-col>
+          <el-col span="18" offset="3">
+            <el-card>
+              <el-row>
+                <el-col span="8">
+                  <a href="#/details?id=26374197">
+                    <img src="http://image13.m1905.cn/uploadfile/2018/1225/thumb_1_320_174_20181225093645278589.jpg"
+                         alt="《蜘蛛侠：平行宇宙》跳出舒适圈 开启多远宇宙空间">
+                  </a>
+                </el-col>
+                <el-col span="15" offset="1">
+                  <!--                            <h4 style="text-align: center">s</h4>-->
+                  <el-link href="#/details?id=26374197"
+                           style="text-align: center;font-weight: bold;font-size: large">
+                    《蜘蛛侠：平行宇宙》跳出舒适圈 开启多远宇宙空间
+                  </el-link>
+                  <p class="txt-abstract">
+                    本期《今日影评》特邀中国电影艺术研究中心副研究员左衡，为您解析《蜘蛛侠：平行宇宙》：六个蜘蛛侠会发生怎样的故事？</p>
+                  <div class="txt-date">2018-12-24</div>
+                </el-col>
+              </el-row>
+            </el-card>
+          </el-col>
         </el-row>
+      </v-container>
+
 
 
     </div>
@@ -99,7 +103,7 @@
         components: {NavBar},
         data() {
             return {
-              avatar: "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2527427661.jpg",
+              avatar: "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3654606833,2475380010&fm=26&gp=0.jpg",
                 carousels: [
                     {
                         img: 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=257249189,2109112446&fm=26&gp=0.jpg',
