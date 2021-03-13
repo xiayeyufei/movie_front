@@ -40,7 +40,6 @@
                         v-on="on" color="light-blue lighten-3" elevation="0" style="text-align: center;color:white;" @click="$router.push('/login')">
                   <v-avatar
                       size="40"
-
                   ><img src="../assets/185ca9e54910fd64a7b7a7704d62ff2f34ef7b3a.jpg@518w_1e_1c.jpg">
                   </v-avatar>
                 </v-btn>
