@@ -56,15 +56,16 @@
                         </el-row>
                         <el-row>
                             <v-rating
-                                    v-model="movieitem.score"
-                                    disabled
+                                    :value=movieitem.score/2.0
                                     medium
                                     background-color="orange lighten-3"
-                                    color="orange">
+                                    color="orange"
+                                    readonly
+                                    length="5">
                             </v-rating>
                         </el-row>
                         <el-row style="margin-top: 10px">
-                            <span style="color: #475669;font-style: italic;font-size: small">{{movieitem.introduction}}</span>
+                            <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 6;-webkit-box-orient: vertical;color: #475669;font-style: italic;font-size: small">{{movieitem.introduction}}</span>
                         </el-row>
                     </el-col>
                 </el-row>
@@ -1137,6 +1138,7 @@
         },
       methods: {
           //n是取值[1,n+1]
+
           productNum(n){
             this.numList=[];
             let num = this.numList;
