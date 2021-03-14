@@ -61,6 +61,7 @@
                                     background-color="orange lighten-3"
                                     color="orange"
                                     readonly
+                                    half-increments
                                     length="5">
                             </v-rating>
                         </el-row>
